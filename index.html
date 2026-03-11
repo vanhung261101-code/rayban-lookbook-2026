@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Ray-Ban 2026 | Grand Lookbook</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        .font-oswald { font-family: 'Oswald', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .rayban-red { background-color: #E31837; }
+        .product-card:hover .concept-img { opacity: 0; }
+        .product-card:hover .studio-img { opacity: 1; transform: scale(1); }
+        .studio-img { opacity: 0; transform: scale(1.05); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    </style>
+</head>
+<body>
+    <nav class="p-8 border-b border-gray-900 flex justify-between items-center bg-black/90 sticky top-0 z-50">
+        <div class="text-4xl font-bold font-oswald italic uppercase tracking-tighter">Ray-Ban</div>
+        <div class="rayban-red text-white px-6 py-1 text-xs font-bold uppercase italic tracking-widest">March 2026 Pitching</div>
+    </nav>
+    <main class="py-20">
+        <section class="mb-32">
+            <div class="px-10 md:px-20 mb-12">
+                <h2 class="text-6xl md:text-8xl font-playfair italic">New Arrivals</h2>
+            </div>
+            <div class="swiper grandSwiper px-10 md:px-20 !pb-20">
+                <div class="swiper-wrapper">
+
+        <div class="swiper-slide product-card group">
+            <div class="relative aspect-[4/5] bg-[#111] overflow-hidden border border-gray-900">
+                <img src="" class="concept-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700">
+                <div class="studio-img absolute inset-0 bg-white p-16 flex items-center justify-center z-20">
+                    <img src="" class="max-w-full max-h-full object-contain">
+                </div>
+            </div>
+            <div class="mt-8 flex justify-between items-start">
+                <div>
+                    <h3 class="text-3xl font-oswald uppercase leading-none tracking-tight">By A$AP Rocky</h3>
+                    <p class="text-gray-600 text-xs mt-2 uppercase font-semibold">SKU: RB3928 // Collection: A$AP Rocky Metal</p>
+                </div>
+                <div class="text-3xl font-bold text-rayban-red italic">$$254</div>
+            </div>
+            <div class="mt-6 border-l-4 border-rayban-red pl-6 py-4 bg-gray-900/40">
+                <p class="text-sm italic font-light leading-relaxed text-gray-300">
+                    <span class="font-bold text-rayban-red uppercase not-italic">Phân tích:</span> <br>
+                    Khung kim loại mảnh, hình oval/chữ nhật theo phong cách "Urban Sophisticated" (Thành thị tinh tế)
+                </p>
+            </div>
+        </div>
+    
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper(".grandSwiper", {
+            slidesPerView: 1.1, spaceBetween: 30, grabCursor: true,
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            breakpoints: { 1024: { slidesPerView: 2.2, spaceBetween: 60 } }
+        });
+    </script>
+</body>
+</html>
