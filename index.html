@@ -16,6 +16,8 @@
         .product-card:hover .concept-img { opacity: 0; }
         .product-card:hover .studio-img { opacity: 1; transform: scale(1); }
         .studio-img { opacity: 0; transform: scale(1.05); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        /* Đảm bảo link không bị đổi màu chữ */
+        a { color: inherit; text-decoration: none; }
     </style>
 </head>
 <body>
@@ -34,32 +36,38 @@
 
     <main class="py-20">
         <section class="mb-32">
-            <div class="px-10 md:px-20 mb-12">
-                <h2 class="text-6xl md:text-8xl font-playfair italic">New Arrivals</h2>
+            <div class="px-10 md:px-20 mb-12 flex items-end justify-between">
+                <div>
+                    <h2 class="text-6xl md:text-8xl font-playfair italic">New Arrivals</h2>
+                </div>
             </div>
             <div class="swiper grandSwiper px-10 md:px-20 !pb-20">
                 <div class="swiper-wrapper">
 
-        <div class="swiper-slide product-card group">
-            <div class="relative aspect-[4/5] bg-[#111] overflow-hidden border border-gray-900">
-                <img src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/639140234_931482465916225_7713442791864394146_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=kFikS3ODXOkQ7kNvwGF96uv&_nc_oc=AdmOsjXr69b7Fw23YflhH9KXZdrXuwGlMUo-dzqtbHUV3rcu4PFv5cnYwhSo5cWHFmqgJ0MPiLkWuXQMnsDFkK5Y&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=URi3FW0VJfLF6g_s1QvNCw&_nc_ss=8&oh=00_Afz8C-5g6E-Thz_ecCz3r2tG70llBqXHjof4k2D-vunfUw&oe=69B772AD" class="concept-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700">
-                <div class="studio-img absolute inset-0 bg-white p-16 flex items-center justify-center z-20">
-                    <img src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/640538755_931482405916231_29686059848975198_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=izcERIaQkrIQ7kNvwEbTrLB&_nc_oc=AdlstC9m6rJgkPvDM-i9R2FCuugwKaPUE4dMPEnn21qgyFnHXKzWs5KnhR20Vra_9ZD0TBfg_VRLO__GvBsdvLUX&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=zwHgpli9luRjOp-6F3qgMQ&_nc_ss=8&oh=00_AfxpQ9bSE3ourB-1YNILn_dhWuCkFS1Q2da1-HuFctyeew&oe=69B75401" class="max-w-full max-h-full object-contain">
+        <div class="swiper-slide">
+            <a href="https://www.ray-ban.com/usa/sunglasses/RB3928rb3928%20by%20asap%20rocky-black/8056262905845" target="_blank" class="product-card group block">
+                <div class="relative aspect-[4/5] bg-[#111] overflow-hidden border border-gray-900">
+                    <img src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/639140234_931482465916225_7713442791864394146_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_ohc=kFikS3ODXOkQ7kNvwGF96uv&_nc_oc=AdmOsjXr69b7Fw23YflhH9KXZdrXuwGlMUo-dzqtbHUV3rcu4PFv5cnYwhSo5cWHFmqgJ0MPiLkWuXQMnsDFkK5Y&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=URi3FW0VJfLF6g_s1QvNCw&_nc_ss=8&oh=00_Afz8C-5g6E-Thz_ecCz3r2tG70llBqXHjof4k2D-vunfUw&oe=69B772AD" class="concept-img absolute inset-0 w-full h-full object-cover transition-opacity duration-700">
+                    <div class="studio-img absolute inset-0 bg-white p-16 flex items-center justify-center z-20">
+                        <img src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/640538755_931482405916231_29686059848975198_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=13d280&_nc_ohc=izcERIaQkrIQ7kNvwEbTrLB&_nc_oc=AdlstC9m6rJgkPvDM-i9R2FCuugwKaPUE4dMPEnn21qgyFnHXKzWs5KnhR20Vra_9ZD0TBfg_VRLO__GvBsdvLUX&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=zwHgpli9luRjOp-6F3qgMQ&_nc_ss=8&oh=00_AfxpQ9bSE3ourB-1YNILn_dhWuCkFS1Q2da1-HuFctyeew&oe=69B75401" class="max-w-full max-h-full object-contain">
+                    </div>
                 </div>
-            </div>
-            <div class="mt-8 flex justify-between items-start">
-                <div>
-                    <h3 class="text-3xl font-oswald uppercase leading-none tracking-tight">By A$AP Rocky</h3>
-                    <p class="text-gray-600 text-xs mt-2 uppercase font-semibold">SKU: RB3928 // Collection: A$AP Rocky Metal</p>
+                
+                <div class="mt-8 flex justify-between items-start">
+                    <div>
+                        <h3 class="text-3xl font-oswald uppercase leading-none tracking-tight group-hover:text-rayban-red transition-colors">By A$AP Rocky</h3>
+                        <p class="text-gray-600 text-xs mt-2 uppercase font-semibold">SKU: RB3928 // Collection: A$AP Rocky Metal</p>
+                    </div>
+                    <div class="text-3xl font-bold text-rayban-red italic">$$254</div>
                 </div>
-                <div class="text-3xl font-bold text-rayban-red italic">$$254</div>
-            </div>
-            <div class="mt-6 border-l-4 border-rayban-red pl-6 py-4 bg-gray-900/40">
-                <p class="text-sm italic font-light leading-relaxed text-gray-300">
-                    <span class="font-bold text-rayban-red uppercase not-italic">Phân tích:</span> <br>
-                    Khung kim loại mảnh, hình oval/chữ nhật theo phong cách "Urban Sophisticated" (Thành thị tinh tế)
-                </p>
-            </div>
+
+                <div class="mt-6 border-l-4 border-rayban-red pl-6 py-4 bg-gray-900/40">
+                    <p class="text-sm italic font-light leading-relaxed text-gray-300">
+                        <span class="font-bold text-rayban-red uppercase not-italic">Phân tích:</span> <br>
+                        Khung kim loại mảnh, hình oval/chữ nhật theo phong cách "Urban Sophisticated" (Thành thị tinh tế)
+                    </p>
+                </div>
+            </a>
         </div>
     
                 </div>
@@ -69,9 +77,6 @@
             </div>
         </section>
     </main>
-    <footer class="p-20 border-t border-gray-900 text-center opacity-40 uppercase tracking-[0.5em] text-[10px]">
-        Ray-Ban Strategy Division // 2026
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         new Swiper(".grandSwiper", {
