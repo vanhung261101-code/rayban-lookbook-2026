@@ -3,29 +3,45 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ray-Ban 2026 | Grand Lookbook</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; }
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .font-oswald { font-family: 'Oswald', sans-serif; }
         .font-playfair { font-family: 'Playfair Display', serif; }
         .rayban-red { background-color: #E31837; }
         .product-card:hover .concept-img { opacity: 0; }
         .product-card:hover .studio-img { opacity: 1; transform: scale(1); }
         .studio-img { opacity: 0; transform: scale(1.05); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+        .swiper-button-next, .swiper-button-prev { color: #fff !important; background: rgba(227, 24, 55, 0.8); width: 50px !important; height: 50px !important; border-radius: 50%; }
+        .swiper-button-next:after, .swiper-button-prev:after { font-size: 18px !important; font-weight: bold; }
+        .swiper-pagination-bullet-active { background: #E31837 !important; }
     </style>
 </head>
 <body>
-    <nav class="p-8 border-b border-gray-900 flex justify-between items-center bg-black/90 sticky top-0 z-50">
+    <nav class="p-8 border-b border-gray-900 flex justify-between items-center bg-black/90 backdrop-blur-md sticky top-0 z-50">
         <div class="text-4xl font-bold font-oswald italic uppercase tracking-tighter">Ray-Ban</div>
-        <div class="rayban-red text-white px-6 py-1 text-xs font-bold uppercase italic tracking-widest">March 2026 Pitching</div>
+        <div class="rayban-red text-white px-6 py-1 text-xs font-bold uppercase italic tracking-widest">March 2026 Update</div>
     </nav>
+
+    <section class="relative h-[85vh] flex items-center justify-center bg-black">
+        <img src="https://images.unsplash.com/photo-1511499767390-91f19760a032?auto=format&fit=crop&w=1920&q=80" class="absolute inset-0 w-full h-full object-cover opacity-40">
+        <div class="relative z-10 text-center">
+            <h1 class="font-playfair italic text-7xl md:text-[10rem] mb-2 leading-none">Iconic</h1>
+            <p class="font-oswald tracking-[0.8em] uppercase text-lg opacity-60">Spring Summer Forecast</p>
+        </div>
+    </section>
+
     <main class="py-20">
         <section class="mb-32">
-            <div class="px-10 md:px-20 mb-12">
-                <h2 class="text-6xl md:text-8xl font-playfair italic">New Arrivals</h2>
+            <div class="px-10 md:px-20 mb-12 flex items-end justify-between">
+                <div>
+                    <h2 class="text-6xl md:text-8xl font-playfair italic">New Arrivals</h2>
+                    <p class="text-gray-500 font-oswald uppercase tracking-[0.4em] mt-2">Analyzed by AI Assistant</p>
+                </div>
             </div>
             <div class="swiper grandSwiper px-10 md:px-20 !pb-20">
                 <div class="swiper-wrapper">
@@ -59,13 +75,20 @@
             </div>
         </section>
     </main>
+    <footer class="p-20 border-t border-gray-900 text-center opacity-40 uppercase tracking-[0.5em] text-[10px]">
+        Ray-Ban Strategy Division // 2026
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         new Swiper(".grandSwiper", {
-            slidesPerView: 1.1, spaceBetween: 30, grabCursor: true,
+            slidesPerView: 1.1, 
+            spaceBetween: 30,
             navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
             pagination: { el: ".swiper-pagination", clickable: true },
-            breakpoints: { 1024: { slidesPerView: 2.2, spaceBetween: 60 } }
+            breakpoints: {
+                768: { slidesPerView: 1.5, spaceBetween: 40 },
+                1024: { slidesPerView: 2.2, spaceBetween: 60 }
+            }
         });
     </script>
 </body>
